@@ -1,0 +1,23 @@
+<div class='container'>
+    <h3>SkullnRoses - Game</h3>
+            {% for p in players%}
+                <p>{{ "Player " + p.name + " has " + (p.deck|length|string) + " cards left with " + (p.score|string) + " points." }}</p>
+            {% endfor %}
+            {{ "Player " + game.players[game.turn].name + " turn."}}
+            {{ text }}
+            {% if play %}
+                <br/>
+                <form action="playskull" method="POST">
+                    <input type="submit" value="Skull">
+                </form>
+                <form action="playrose" method="POST">
+                    <input type="submit" value="Rose">
+                </form>
+                <form action="bet" method="POST">
+                    <input type="text" name="bet">
+                    <input type="submit" value="Bet">
+                </form>
+            {% endif %}
+
+
+</div>

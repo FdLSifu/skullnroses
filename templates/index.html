@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>SkulnRoses</h3>
+        {% for t in text  %}
+            <p>{{ t }}</p>
+        {% endfor %}
+        <form action="addplayer" method="POST">
+            Add Player: <input type="text" name="playername"><br>
+            <input type="submit" value="Add Player">
+        </form>
+        <form action="start" method="POST">
+            <input type="submit" value="Start Game">
+        </form>
+        <form action="reset" method="POST">
+            <input type="submit" value="Reset Game">
+        </form>
+
+</div>
